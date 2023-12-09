@@ -142,10 +142,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Disable windo titlebar
 for_window [class="^.*"] border pixel 1
-
 # gaps
-gaps inner 10
-gaps outer 7 
+gaps inner 9
+gaps left 6
+gaps right 6
+gaps top -7
+gaps bottom 3
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
