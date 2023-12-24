@@ -127,11 +127,11 @@ default_floating_border pixel 0
 for_window [class="feh"] floating enable
 
 # gaps
-gaps inner 9
-gaps left 3
-gaps right 3
-gaps top -7
-gaps bottom 2
+gaps inner 8
+gaps left 2
+gaps right 2
+gaps top 35
+gaps bottom 4
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
