@@ -33,7 +33,7 @@ bold="$(tput bold)"
 black="$(tput setaf 0)"
 red="$(tput setaf 1)"
 green="$(tput setaf 2)"
-yellow="$(tput setaf 3)"
+yellow="$(tput setaf 12)"
 blue="$(tput setaf 4)"
 magenta="$(tput setaf 5)"
 cyan="$(tput setaf 6)"
@@ -41,22 +41,24 @@ white="$(tput setaf 7)"
 reset="$(tput sgr0)"
 
 # you can change these
-lc="${reset}${bold}${cyan}"		# labels
+lc="${reset}${bold}${yellow}"		# labels
 nc="${reset}${bold}${cyan}"		# user and hostname
 ic="${reset}${bold}${white}"	# info
 c0="${reset}${bold}${cyan}"		# first color
-c1="${reset}${cyan}"			# second color
-
+c1="${reset}${blue}"			# second color
+c2="${reset}${yellow}"
 ## OUTPUT
 
 cat <<EOF
 
-${c0}        /\        ${nc}${USER}${ic}@${nc}${host}${reset}
-${c0}       /  \       ${lc}OS:        ${ic}${os}${reset}
-${c0}      /\   \      ${lc}KERNEL:    ${ic}${kernel}${reset}
-${c0}     /  ${c1}__  \     ${lc}UPTIME:    ${ic}${uptime}${reset}
-${c1}    /  (  )  \    ${lc}PACKAGES:  ${ic}${packages}${reset}
-${c1}   / __|  |__\\\\   ${lc}SHELL:     ${ic}${shell}${reset}
-${c1}  ///        \\\\\  ${lc}WM:	${ic}${wm}${reset}
+
+		${nc}${USER}${ic}@${nc}${host}${reset}
+${c1}       /\\       ${lc}OS:        ${ic}${os}${reset}
+${c1}      /  \\      ${lc}KERNEL:    ${ic}${kernel}${reset}
+${c1}     /    \\     ${lc}UPTIME:    ${ic}${uptime}${reset}
+${c1}    /      \\    ${lc}PACKAGES:  ${ic}${packages}${reset}
+${c1}   /   ,,   \\   ${lc}SHELL:     ${ic}${shell}${reset}
+${c2}  /   |  |   \\  ${lc}WM:        ${ic}${wm}${reset}
+${c0} /_-''    ''-_\\ ${lc}COLORS:    ${ic}fjdkf 
 
 EOF

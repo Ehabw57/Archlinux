@@ -8,7 +8,7 @@
 window:
 
   # Background opacity
-  opacity: 0.8
+  opacity: 0.90
 
   # Padding x is left,right y is top,bottom
   padding:
@@ -19,7 +19,8 @@ window:
 font:
   normal: 
     family: DejaVu sans mono
-    style: Regular
+    style: Regualr
+
   bold:
     family: DejaVu sans mono
     style: Bold
@@ -120,8 +121,8 @@ colors:
 # Default:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+    program: /usr/bin/bash
 #  args:
 #    - --login
 
