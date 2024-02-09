@@ -1,30 +1,14 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/polybar"
-themes=(`ls --hide="launch.sh" $dir`)
+# Add this script to your wm startup file.
 
-launch_bar() {
-	# Terminate already running bar instances
-	killall -q polybar
+DIR="$HOME/.config/polybar/"
 
-	# Wait until the processes have been shut down
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-	
-	# Lauch the main bar
-	polybar -q main -c "$dir/$style/config.ini" &	
-}
+# Terminate already running bar instances
+killall -q polybar
 
-if [[ "$1" == "--grayblocks" ]]; then
-	style="grayblocks"
-	launch_bar
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-else
-	cat <<- EOF
-	Usage : launch.sh --theme
-		
-	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
-	--forest    --grayblocks     --hack      --material
-	--shades    --shapes
-	EOF
-fi
+# Launch the bar
+polybar -q main -c "$DIR"/config.ini &
