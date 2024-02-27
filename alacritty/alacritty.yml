@@ -8,7 +8,7 @@
 window:
 
   # Background opacity
-  opacity: 0.90
+  opacity: 0.95
 
   # Padding x is left,right y is top,bottom
   padding:
@@ -117,19 +117,12 @@ colors:
     white:   '#828482'
 
 # shell.
-#
-# Default:
-#   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
-#   - (Windows) powershell
 shell:
     program: /usr/bin/bash
 #  args:
 #    - --login
 
 # Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
 #working_directory: None
 
 
