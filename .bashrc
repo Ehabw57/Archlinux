@@ -1,7 +1,7 @@
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 # Activate vi mode
 set -o vi
 

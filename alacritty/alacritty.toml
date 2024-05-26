@@ -1,0 +1,96 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#666666"
+blue = "#7aa6da"
+cyan = "#70c0b1"
+green = "#b9ca4a"
+magenta = "#c397d8"
+red = "#d54e53"
+white = "#eaeaea"
+yellow = "#e7c547"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.dim]
+black = "#131415"
+blue = "#556a7d"
+cyan = "#5b7d78"
+green = "#777c44"
+magenta = "#75617b"
+red = "#864343"
+white = "#828482"
+yellow = "#9e824c"
+
+[colors.footer_bar]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#8abeb7"
+green = "#b5bd68"
+magenta = "#b294bb"
+red = "#c40f19"
+white = "#c5c8c6"
+yellow = "#f0c674"
+
+[colors.primary]
+background = "#101419"
+bright_foreground = "#1B1A55"
+dim_foreground = "#534C91"
+foreground = "#b6beca"
+
+[colors.search.focused_match]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "DejaVu sans mono"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "DejaVu sans mono"
+style = "Italic"
+
+[font.normal]
+family = "DejaVu sans mono"
+style = "Regualr"
+
+[font.offset]
+x = 0
+y = 2
+
+[shell]
+program = "/usr/bin/bash"
+
+[window]
+opacity = 0.93
+
+[window.padding]
+x = 12
+y = 8
