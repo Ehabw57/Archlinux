@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+# Selects a random wallpaper and set it to my screen
+
+WALL=$(fzf --walker-root=/home/zerobors/Wallpaper) # Select a random wallpaper form my dir
+if [[ -z $WALL ]]; then
+	echo "No wallpaper selected"
+	exit 3
+fi
+WALLNAME=${WALL##*/} # cuts the unwanted path
+echo "Wallpaper has been set to  <$WALLNAME>" # Prints the choosen wallpepr
+wal -i $WALL > /dev/null # Set the wallpaper to my screen

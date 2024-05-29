@@ -1,0 +1,17 @@
+#!/bin/bash
+# List all sessions then store the selected one
+SESSION=$(tmux list-sessions -F "#{session_name}" | fzf)
+# Check weather thre is a session selected or not
+if [[ -z "$SESSION" ]]; then
+	echo "No session selected"
+	exit 2
+fi
+
+# Switch to selected session inside tmux
+if [ -n "$TMUX" ]; then
+	tmux switch-client -t "$SESSION"
+# Outside tmux
+else
+	tmux attach -t "$SESSION"
+fi
+

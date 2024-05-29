@@ -94,3 +94,8 @@ opacity = 0.93
 [window.padding]
 x = 12
 y = 8
+key_bindings:
+  - key: E
+    mods: Control
+    command:
+      program: "/home/zerobors/tmux-fzf.sh"

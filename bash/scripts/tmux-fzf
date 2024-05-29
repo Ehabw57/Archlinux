@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+# List all system directory and store selected path
+SELECTED=$(find ~/.config ~/Repos -type d | fzf)
+# Check if there is a path selected
+if [[ -z "$SELECTED" ]]; then
+	echo "No destination selected"
+	exit 3
+fi
+# Extract dirctory name
+DIR=$(echo "$SELECTED" | awk -F '/' '{print $NF}')
+
+# Create a new tmux session mapped to selected path
+# Inside tmux
+if [ -n "$TMUX" ]; then
+	tmux new -c "$SELECTED" -s "$DIR" -d >> /dev/null
+	tmux switch-client -t "$DIR"
+# Outside tmux
+else
+	tmux new -c "$SELECTED" -s "$DIR" -A 
+fi
+
